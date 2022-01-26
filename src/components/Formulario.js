@@ -29,7 +29,7 @@ export function Formulario(){
 
     return(
         <>
-            <Stats/>
+            <Stats />
             <div className="columna">
                 <h3 className="Offensive"> Offensive Mode Damage(Melee): </h3>
                 <h4 className="Offensive">{Math.round(offDamage)}</h4>
