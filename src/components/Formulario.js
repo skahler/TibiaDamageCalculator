@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from "react";
 import "../index.css"
+import Stats from "./Stats";
 
 export function Formulario(){
     const [charLevel,setCharLevel] = useState(0);
@@ -28,16 +29,7 @@ export function Formulario(){
 
     return(
         <>
-            <div className="tittle">
-                <h2>Damage Calculator: </h2>
-                <h5>The result is the average damage You'll deal to a monster</h5>
-                <label htmlFor="level" >Level: </label>
-                <input type="number" name="level" value={charLevel} onChange={(e)=>setCharLevel(Number(e.target.value))} style={myStyle}/>
-                <label htmlFor="wattack" >Weapon Attack: </label>
-                <input type="number" name="wattack" value={wattack} onChange={(e)=>setWattack(Number(e.target.value))} style={myStyle}/>
-                <label htmlFor="skills" >Skills: </label>
-                <input type="number" name="skills" value={skills} onChange={(e)=>setSkills(Number(e.target.value))} style={myStyle}/>
-            </div>
+            <Stats/>
             <div className="columna">
                 <h3 className="Offensive"> Offensive Mode Damage(Melee): </h3>
                 <h4 className="Offensive">{Math.round(offDamage)}</h4>
